@@ -9,6 +9,7 @@ class EmployeeController extends Controller
     public function index()
     {
         // Logika wyświetlania listy pracowników
+        return view('employees', ['employees' => Employee::all()]);
     }
 
     public function create()

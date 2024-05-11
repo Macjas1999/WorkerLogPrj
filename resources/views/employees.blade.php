@@ -9,7 +9,7 @@
     <h1>List of Employees</h1>
     <ul>
         @foreach ($employees as $employee)
-            <li>{{ $employee->name }}</li>
+            <li>{{ $employee->imie }}</li>
         @endforeach
     </ul>
 </body>
