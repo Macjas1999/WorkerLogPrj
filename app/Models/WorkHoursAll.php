@@ -12,13 +12,7 @@ class Employee extends Model
 
     protected $fillable = [
         'wrkrID',
-        'name',
-        'surname',
-        'email',
-        'contact_number',
-        'position',
-        'sallary_per_hour',
-        'date_of_birth',
-        'date_of_employment',
+        'month_year',
+        'hours',
     ];
 }
