@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestr Pracowników</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Rejestr Pracowników</div>
+        <ul class="nav-links">
+            <li><a href="#home">Strona Główna</a></li>
+            <li><a href="#add">Dodaj pracownika</a></li>
+            <li><a href="#delete">Usuń Pracownika</a></li>
+            <li><a href="#edit">Edytuj Pracownika</a></li>
+            <li><a href="#statistic">Statystyki</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 <?php
 
 use Illuminate\Contracts\Http\Kernel;
