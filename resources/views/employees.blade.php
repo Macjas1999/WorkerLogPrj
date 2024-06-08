@@ -9,7 +9,7 @@
     <h1>List of Employees</h1>
     <ul>
         @foreach ($employees as $employee)
-            <li>{{ $employee->name }}</li>
+            <li>{{ $employee->nwrkrID }} | {{ $employee->name }} | {{ $employee->surname }} | {{ $employee->position }}</li>
         @endforeach
     </ul>
 </body>
