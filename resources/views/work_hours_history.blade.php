@@ -10,16 +10,16 @@
     <table>
         <thead>
             <tr>
-                <th>Employee</th>
                 <th>Date</th>
+                <th>Employee</th>
                 <th>Hours</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($work_hours as $work_hour)
                 <tr>
-                    <td>{{ $work_hour->employee->name }}</td>
                     <td>{{ $work_hour->date }}</td>
+                    <td>{{ $work_hour->employee->wrkrID }}</td>
                     <td>{{ $work_hour->hours }}</td>
                 </tr>
             @endforeach
