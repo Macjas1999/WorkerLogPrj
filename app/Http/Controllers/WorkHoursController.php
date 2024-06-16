@@ -2,24 +2,42 @@
 namespace App\Http\Controllers;
 
 use App\Models\WorkHour;
+use App\Models\Employee;
 use Illuminate\Http\Request;
 
 class WorkHoursController extends Controller
 {
+    public function index()
+    {
+        $workHours = WorkHour::with('employee')->get();
+        return view('work_hours.index', compact('workHours'));
+    }
+
     public function create()
     {
-        // Logika wyświetlania formularza dodawania godzin pracy
+        $employees = Employee::all();
+        return view('work_hours.create', compact('employees'));
     }
 
     public function store(Request $request)
     {
-        // Logika zapisywania godzin pracy do bazy danych
+        WorkHour::create($request->all());
+        return redirect()->route('work_hours.index');
     }
 
-    public function history()
+    public function show(WorkHour $workHour)
     {
-        // Logika wyświetlania historii przepracowanych godzin
+        return view('work_hours.show', compact('workHour'));
     }
 
-    // Inne metody...
+    public function edit(WorkHour $workHour)
+    {
+        $employees = Employee::all();
+        return view('work_hours.edit', compact('workHour', 'employees'));
+    }
+    public function update(Request $request, WorkHour $workHour)
+    {
+        $workHour->update($request->all());
+        return redirect()->route('work_hours.index');
+    }
 }
